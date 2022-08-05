@@ -7,7 +7,7 @@ public class Ranger extends Character implements Attacker {
     //Class properties
     private int agility;
     private int energy;
-    private
+
 
     //constructor
     public Ranger(int id, String name, int hp, boolean isAlive, boolean inCombat, int agility, int energy) {
