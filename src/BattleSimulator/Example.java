@@ -1,4 +1,4 @@
 package BattleSimulator;
 
-public class afkpsa {
+public class Example {
 }
