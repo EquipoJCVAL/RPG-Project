@@ -16,11 +16,9 @@ public class Wizard extends Character{
     }
 
     //Interface methods
-    public void strongAttack() {
-    }
-    public void weakAttack() {
-    }
-    public void regeneration() {
+    @Override
+    public void attackCommand() {
+        super.attackCommand();
     }
 
     //getters

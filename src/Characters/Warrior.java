@@ -16,13 +16,13 @@ public class Warrior extends Character{
         this.strength = strength;
     }
 
+
     //interface methods
-    public void strongAttack() {
+    @Override
+    public void attackCommand() {
+        super.attackCommand();
     }
-    public void weakAttack() {
-    }
-    public void regeneration() {
-    }
+
 
     //getters
     public int getStamina() {

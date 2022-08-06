@@ -17,13 +17,13 @@ public class Ranger extends Character{
     }
 
 
+    // como al final no sabemos muy bien que haremos con el ranger, si quieres puedes dejarlo normal/basico como el wizard
+    // o el guerrero, y luego ya pensaremos algo
 
     //interface methods
-    public void strongAttack() {
-    }
-    public void weakAttack() {
-    }
-    public void regeneration() {
+    @Override
+    public void attackCommand() {
+        super.attackCommand();
     }
 
     //getters

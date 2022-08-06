@@ -21,10 +21,11 @@ public class Character implements Attacker {
         this.inCombat = inCombat;
     }
 
+
+
+    //Interface Methods
     public void attackCommand(){
 
-    }
-    public void regeneration() {
     }
 
     //getters
