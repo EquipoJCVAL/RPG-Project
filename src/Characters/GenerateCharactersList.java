@@ -8,6 +8,8 @@ public class GenerateCharactersList {
 
     public Character[] generateCharacters() throws FileNotFoundException {
         File file = new File("characters.csv");
+
+        // Count how many lines
         Scanner r = new Scanner(file);
         int counterLines = 0;
         while(r.hasNextLine()){
@@ -15,18 +17,18 @@ public class GenerateCharactersList {
             r.nextLine();
         }
 
+        // Create a list with the same size of the counted lines
         Character[] charactersList = new Character[counterLines];
 
 
         Scanner reader = new Scanner(file);
 
+        // Keep track of the list position and loop
         int listPosition = 0;
         while (reader.hasNextLine()) {
 
             String data = reader.nextLine();
             String[] list = data.split("-");
-
-
 
             for (int i = 0; i < list.length; i++){
                 list[i] = list[i].trim();
