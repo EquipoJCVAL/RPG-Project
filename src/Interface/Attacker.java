@@ -2,6 +2,6 @@ package Interface;
 
 public interface Attacker {
 
-    void attackCommand();
+    int[] attackCommand();
 
 }

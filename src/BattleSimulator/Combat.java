@@ -13,6 +13,10 @@ public class Combat {
         Wizard fighter2 = Alex ;
 
         while(fighter1.getHp() > 0 || fighter2.getHp() > 0){
+            int damageVal;
+            damageVal = fighter1.attackCommand()[0];
+            fighter2.setHp(fighter2.getHp() - damageVal);
+
 
         }
 

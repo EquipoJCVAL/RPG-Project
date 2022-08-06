@@ -17,7 +17,7 @@ public class Houndmaster extends Character {
     //simplemetne que haga daño dos veces, una que sea daño = precision*0.75, y otra que sea daño = precision*0.25
     //luego ya podemos pensar de añadir alguna mecanica mas que interactue con el perrete
     @Override
-    public void attackCommand() {
+    public int[] attackCommand() {
         super.attackCommand();
     }
 

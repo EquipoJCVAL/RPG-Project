@@ -16,7 +16,7 @@ public class Dragon extends Character {
     // que una vez sabes si tiene suficiente mana y va a hacer el ataque fuerte, compare la vida, si tiene menos de vida
     // X, hace daño*2, sino, que haya un "else" que haga el daño normal, y yata
     @Override
-    public void attackCommand() {
+    public int[] attackCommand() {
         super.attackCommand();
     }
 

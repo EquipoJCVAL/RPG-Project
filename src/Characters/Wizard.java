@@ -17,7 +17,7 @@ public class Wizard extends Character{
 
     //Interface methods
     @Override
-    public void attackCommand() {
+    public int[] attackCommand() {
         super.attackCommand();
     }
 

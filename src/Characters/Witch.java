@@ -17,7 +17,7 @@ public class Witch extends Character{
     // y luego el "ataque" que gastara recursos es un if(hp < 70 (un valor plano cualquiera)) { hp+50; darkMana -10
     //eso es lo que tiene que hacer el attack command de la witch
     @Override
-    public void attackCommand() {
+    public int[] attackCommand() {
         super.attackCommand();
     }
 

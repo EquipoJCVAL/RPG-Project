@@ -22,7 +22,7 @@ public class Ranger extends Character{
 
     //interface methods
     @Override
-    public void attackCommand() {
+    public int[] attackCommand() {
         super.attackCommand();
     }
 
