@@ -2,7 +2,7 @@ package Characters;
 
 import Interface.Attacker;
 
-public class Ranger extends Character implements Attacker {
+public class Ranger extends Character{
 
     //Class properties
     private int agility;

@@ -1,9 +1,12 @@
 package Characters;
 
-public class Character {
+import Interface.Attacker;
+
+public class Character implements Attacker {
 
     //properties
     private int id;
+    private static int idCounter = 0;
     private String name;
     private int hp;
     private boolean isAlive;
@@ -11,15 +14,19 @@ public class Character {
 
     //Constructor
     public Character(int id, String name, int hp, boolean isAlive, boolean inCombat) {
-        this.id = id;
+        setId(id);
         this.name = name;
         this.hp = hp;
         this.isAlive = isAlive;
         this.inCombat = inCombat;
     }
 
-
-
+    public void strongAttack() {
+    }
+    public void weakAttack() {
+    }
+    public void regeneration() {
+    }
 
     //getters
     public int getId() {
@@ -40,8 +47,10 @@ public class Character {
 
     //setters
     public void setId(int id) {
-        this.id = id;
+        this.id = idCounter++;
     }
+
+
     public void setName(String name) {
         this.name = name;
     }

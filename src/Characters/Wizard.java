@@ -2,7 +2,7 @@ package Characters;
 
 import Interface.Attacker;
 
-public class Wizard extends Character implements Attacker {
+public class Wizard extends Character{
 
     //Class properties;
     private int mana;

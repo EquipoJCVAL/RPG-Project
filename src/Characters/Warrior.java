@@ -2,7 +2,7 @@ package Characters;
 
 import Interface.Attacker;
 
-public class Warrior extends Character implements Attacker {
+public class Warrior extends Character{
 
 
     //Class properties
