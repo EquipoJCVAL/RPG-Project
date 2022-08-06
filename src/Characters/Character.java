@@ -21,9 +21,8 @@ public class Character implements Attacker {
         this.inCombat = inCombat;
     }
 
-    public void strongAttack() {
-    }
-    public void weakAttack() {
+    public void attackCommand(){
+
     }
     public void regeneration() {
     }
