@@ -2,13 +2,13 @@ package Characters;
 
 public class Dragon extends Character {
 
-    private int dragonPower;
-    private int dragonEssence;
+    private int power;
+    private int essence;
 
-    public Dragon(int id, String name, int hp, boolean isAlive, boolean inCombat, int dragonPower, int dragonEssence) {
+    public Dragon(int id, String name, int hp, boolean isAlive, boolean inCombat, int power, int essence) {
         super(id, name, hp, isAlive, inCombat);
-        this.dragonPower = dragonPower;
-        this.dragonEssence = dragonEssence;
+        this.power = power;
+        this.essence = essence;
     }
 
     //el dragon es exactamente normal, como un wizard o una witch, pero tiene el condicional de "if hp<50{ daño*2}"
@@ -21,18 +21,18 @@ public class Dragon extends Character {
     }
 
     //getters
-    public int getDragonPower() {
-        return dragonPower;
+    public int getPower() {
+        return power;
     }
-    public int getDragonEssence() {
-        return dragonEssence;
+    public int getEssence() {
+        return essence;
     }
 
     //setters
-    public void setDragonPower(int dragonPower) {
-        this.dragonPower = dragonPower;
+    public void setPower(int power) {
+        this.power = power;
     }
-    public void setDragonEssence(int dragonEssence) {
-        this.dragonEssence = dragonEssence;
+    public void setEssence(int essence) {
+        this.essence = essence;
     }
 }
