@@ -4,12 +4,12 @@ import java.io.FileNotFoundException;
 import java.io.File;
 import java.util.Scanner;
 
-public class GenerateCharactersList {
+public class ImportCharacters {
 
-    public Character[] generateCharacters() throws FileNotFoundException {
-        File file = new File("characters.csv");
+    public Character[] importCharacters() throws FileNotFoundException {
+        File file = new File("src/characters.csv");
 
-        // Count how many lines
+        // Count how many lines in the file
         Scanner r = new Scanner(file);
         int counterLines = 0;
         while(r.hasNextLine()){
@@ -55,7 +55,7 @@ public class GenerateCharactersList {
 
                 }
                 case "Witch" -> {
-                    Witch witch = new Witch(Integer.parseInt(Integer.parseInt(list[0]), list[1], Integer.parseInt(list[2]), Boolean.parseBoolean(list[3]), Boolean.parseBoolean(list[4]), Integer.parseInt(list[5]), Integer.parseInt(list[6]));
+                    Witch witch = new Witch(Integer.parseInt(list[0]), list[1], Integer.parseInt(list[2]), Boolean.parseBoolean(list[3]), Boolean.parseBoolean(list[4]), Integer.parseInt(list[5]), Integer.parseInt(list[6]));
                     charactersList[listPosition] = witch;
 
                 }

@@ -21,8 +21,8 @@ public class Warrior extends Character{
     @Override
     public int[] attackCommand() {
         super.attackCommand();
+        return null;
     }
-
 
     //getters
     public int getStamina() {
