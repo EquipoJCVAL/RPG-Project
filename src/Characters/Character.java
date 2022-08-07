@@ -25,7 +25,7 @@ public class Character implements Attacker {
 
     //Interface Methods
     public int[] attackCommand(){
-
+        return null;
     }
 
     //getters
