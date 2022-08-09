@@ -9,7 +9,7 @@ public class ImportCharacters {
     public Character[] importCharacters() throws FileNotFoundException {
         File file = new File("src/characters.csv");
 
-        // Count how many lines in the file
+        // Counts how many lines in the file
         Scanner r = new Scanner(file);
         int counterLines = 0;
         while(r.hasNextLine()){
@@ -17,13 +17,13 @@ public class ImportCharacters {
             r.nextLine();
         }
 
-        // Create a list with the same size of the counted lines
+        // Creates a list with the same size of the counted lines
         Character[] charactersList = new Character[counterLines];
 
 
         Scanner reader = new Scanner(file);
 
-        // Keep track of the list position and loop
+        // Keeps track of the list position and then loop
         int listPosition = 0;
         while (reader.hasNextLine()) {
 
