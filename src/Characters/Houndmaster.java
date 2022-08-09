@@ -19,6 +19,7 @@ public class Houndmaster extends Character {
     @Override
     public int[] attackCommand() {
         super.attackCommand();
+        return null;
     }
 
     //getters
