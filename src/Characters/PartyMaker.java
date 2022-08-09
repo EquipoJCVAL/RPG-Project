@@ -57,8 +57,8 @@ public class PartyMaker {
         }
         return partyMembers;
 
-    }
-
+    }//Metodo para darle un nombre a la party, hemos decidido no usarlo
+    /*
     public static String[] PartyNames = {"Rational Wolfpack","Kitchen Mafia","Peace Rainbows",
             "Productive Escapism","The Public Spat","All in the Mind","Halter Ego","Heart Dark Matter",
             "Thrill Called Money","Gossip Goblins"};
@@ -67,19 +67,8 @@ public class PartyMaker {
         Random rand = new Random();
         return PartyNames.get(rand.nextInt(PartyNames.size()));
     }
-
-    public PartyMaker(String partyName, int partySize, List<Character> partyMembers) {
-        this.partyName = getRandomPartyName();
-        this.partySize = partySize;
-        //this.partyMembers = partyMembers;
-    }
-
-     /*    public static String getRandomPartyName() {git
-             return PartyNames[new Random().nextInt(PartyNames.length)];
-
-
-         }
 */
+
 }
 
 
