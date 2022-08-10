@@ -19,6 +19,20 @@ public class Wizard extends Character{
     @Override
     public int[] attackCommand() {
         super.attackCommand();
+        int damage;
+        if(getMana() > 5){
+            damage = this.intelligence;
+            setMana(getMana() -5);
+        } else {
+            damage = this.intelligence/2;
+            setMana(getMana() +3);
+        }
+        int[] results = new int[3];
+
+        // results
+        results[0] = damage;
+        results[2] = 1;
+        return results;
     }
 
     //getters

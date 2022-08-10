@@ -19,6 +19,26 @@ public class Witch extends Character{
     @Override
     public int[] attackCommand() {
         super.attackCommand();
+        int damage;
+        int poison = 0;
+        if (getDarkMana() > 5 && getHp() < 70) {
+            damage = this.arcane;
+            poison = damage;
+            setDarkMana(getDarkMana()-5);
+        } else {
+            damage = this.arcane/2;
+            poison = poison+10;
+            setDarkMana(getDarkMana()+3);
+        }
+
+        int[] results = new int[3];
+
+        //results
+        results[0] = damage;
+        results[1] = poison;
+        results[2] = 2;
+        return results;
+
     }
 
     //getters

@@ -21,6 +21,21 @@ public class Warrior extends Character{
     @Override
     public int[] attackCommand() {
         super.attackCommand();
+        int damage;
+        if (getStamina() > 5) {
+            damage = this.strength;
+            setStamina(getStamina()-5);
+        } else {
+            damage = this.strength / 2;
+            setStamina(getStamina()+3);
+        }
+        int[] results = new int[3];
+
+        //results
+        results[0] = damage;
+        results[2] = 3;
+        return results;
+
     }
 
 
