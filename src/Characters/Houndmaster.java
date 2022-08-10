@@ -19,12 +19,15 @@ public class Houndmaster extends Character {
     @Override
     public int[] attackCommand() {
         super.attackCommand();
+        int dogHits = 0;
         int damage;
+
         if (getFocus() > 5) {
-            damage = this.precision;
+            dogHits = (int) (Math.random() * 3);
+            damage = (int) (this.precision*0.75);
             setFocus(getFocus()-5);
         } else {
-            damage = this.precision/2;
+            damage = (int) (this.precision*0.75);
             setFocus(getFocus()+1);
         }
 
@@ -33,6 +36,7 @@ public class Houndmaster extends Character {
         //results
         results[0] = damage;
         results[2] = 0;
+        results[3] = dogHits;
         return results;
 
     }

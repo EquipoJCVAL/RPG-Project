@@ -5,6 +5,8 @@ public class Witch extends Character{
     private int arcane;
     private int darkMana;
 
+    private int poison = 0;
+
     //constructor
     public Witch(int id, String name, int hp, boolean isAlive, boolean inCombat, int arcane, int darkMana) {
         super(id, name, hp, isAlive, inCombat);
@@ -19,23 +21,20 @@ public class Witch extends Character{
     @Override
     public int[] attackCommand() {
         super.attackCommand();
-        int damage;
-        int poison = 0;
+        int cura = 0;
         if (getDarkMana() > 5 && getHp() < 70) {
-            damage = this.arcane;
-            poison = damage;
+            cura = 50;
             setDarkMana(getDarkMana()-5);
         } else {
-            damage = this.arcane/2;
-            poison = poison+10;
+            poison = this.arcane/2;
             setDarkMana(getDarkMana()+3);
         }
 
         int[] results = new int[3];
 
         //results
-        results[0] = damage;
-        results[1] = poison;
+        results[0] = poison;
+        results[1] = cura;
         results[2] = 2;
         return results;
 
