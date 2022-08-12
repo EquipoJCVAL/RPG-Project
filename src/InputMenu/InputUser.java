@@ -4,14 +4,17 @@ import BattleSimulator.Combat;
 import CSVImportExport.ImportCharacters;
 import Characters.*;
 import Characters.Character;
+import Randomizer.PartyMaker;
 
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
+import java.lang.reflect.Array;
 import java.util.*;
 
 public class InputUser {
 
     static ArrayList<Characters.Character> characterList = new ArrayList<>();
+    String winnerTeam;
     static int numHp;
     static int numPow;
     static int numMana;
@@ -36,7 +39,7 @@ public class InputUser {
 
         while(true) {
 
-            System.out.println("1.- Create new character \n 2.- Import party \n 3.- Visit the graveyard \n 4.- Start combat \n 5.- Leave the game");
+            System.out.println("1.- Create new character \n 2.- Import party \n 3.- Visit the graveyard \n 4.- Start combat \n 5.- Party fight \n 6.- Leave the game");
 
             for (int i = 0; i < characterList.size(); i++) {
                 System.out.println(characterList.get(i).getId());
@@ -118,43 +121,111 @@ public class InputUser {
                     while (true) {
                         System.out.println("Please, state the filename of the file you wish to import");
                         String path = sc.nextLine();
+
                         Character[] list = ImportCharacters.importCharacters(path);
                         characterList.addAll(Arrays.asList(list));
                         for (int i = 0; i < list.length; i++) {
                             System.out.println("The following character has been added to the game: " + list[i].getName());
-
                         }
+
                         break;
                     }
+
                 } else if (whatNext.equals("3")) {
+
+                    if (Combat.graveyardList.size() == 0) {
+                        System.out.println("Well.. it would seems like there's no one dead here-");
+                        System.out.println("Go on. Go get some people dead by making them fight or something, dunno");
+                        break;
+                    } else {
+                        System.out.println("You hear the sound of crows in the distance as you walk closer to the doors of the graveyard");
+                        System.out.println("\u001b[31m" + "So? Your dead friends are there, what were you expecting, come on?" + "\u001B[0m\"");
+                        System.out.println("These are the following characters that have died in battle;");
+                        for (int i = 0; i < Combat.graveyardList.size(); i++) {
+                            System.out.println(Combat.graveyardList.get(i).getName() + " the " + Combat.graveyardList.get(i).getClass());
+                        }
+                        System.out.println("Press Enter to continue");
+                        sc.nextLine();
+                    }
                     break;
                 } else if (whatNext.equals("4")) {
+
                     if (characterList.size() < 2) {
                         System.out.println("I'm very sorry to ruin your bloodthirst, but you need at least two characters to do this.");
                         System.out.println("Please go back and make some more~");
                     } else {
                         System.out.println("Very well... you wish to fight.");
                         System.out.println("Please choose your fighters!");
-                        String nameCheck1 = sc.nextLine();
                         Characters.Character fighter1 = null;
-                        for (int i = 0; i < characterList.size(); i++) {
-                            if (characterList.get(i).getName().equals(nameCheck1)) {
-                                fighter1 = characterList.get(i);
+                        boolean valid = false;
+                        while (!valid) {
+                            String nameCheck1 = sc.nextLine();
+                            for (int i = 0; i < characterList.size(); i++) {
+                                if (characterList.get(i).getName().equals(nameCheck1)) {
+                                    if (characterList.get(i).getName().equals(nameCheck1)) {
+                                        fighter1 = characterList.get(i);
+                                        valid = true;
+                                        break;
+                                    } else {
+                                        System.out.println("The name you entered is not one of an existing character, please try again.");
+                                        System.out.println("Enter your character's name:");
+                                    }
+                                }
+                            }
+                            System.out.println("And your adversary");
+                            Characters.Character fighter2 = null;
+                            valid = false;
+                            while (!valid) {
+                                String nameCheck2 = sc.nextLine();
+                                for (int i = 0; i < characterList.size(); i++) {
+                                    if (characterList.get(i).getName().equals(nameCheck2)) {
+                                        if (characterList.get(i).getName().equals(nameCheck2)) {
+                                            fighter2 = characterList.get(i);
+                                            valid = true;
+                                            break;
+                                        } else {
+                                            System.out.println("The name you entered is not one of an existing character, please try again.");
+                                            System.out.println("Enter your opponent's name:");
+                                        }
+                                    }
+                                }
+                            }
+                            Combat.combat(fighter1, fighter2);
+                        }
+                    }
+                } else if (whatNext.equals("5")) {
+                    System.out.println("So I see you'd like to see a massacre huh?");
+                    System.out.println("Very well, there will be blood- Now, now. I will summon two random parties for our entertainment, yes?");
+
+                    //we pick two parties thanks to the random party generator already existing in PartyMaker.
+                    List<Character> team1 = PartyMaker.randomParty();
+                    List<Character> team2 = PartyMaker.randomParty();
+
+                    //we make two random number pickers between 0 and the team size, so it will pick the fighters.
+                    for (int c = 0; c < 4; c++) {
+                        for (int i = 0; i < team1.size(); i++) {
+                            if (team1.get(i).getHp() <= 0) {
+                                team1.remove(i);
                             }
                         }
-                        System.out.println("And your adversary");
-                        String nameCheck2 = sc.nextLine();
-                        Characters.Character fighter2 = null;
-                        for (int i = 0; i < characterList.size(); i++) {
-                            if (characterList.get(i).getName().equals(nameCheck2)) {
-                                fighter2 = characterList.get(i);
+                        for (int i = 0; i < team2.size(); i++) {
+                            if (team2.get(i).getHp() <= 0) {
+                                team2.remove(i);
                             }
                         }
+                        int random1 = (int) ((Math.random() * team1.size()));
+                        int random2 = (int) ((Math.random() * team1.size()));
+
+                        Character fighter1 = team1.get(random1);
+                        Character fighter2 = team2.get(random2);
 
                         Combat.combat(fighter1, fighter2);
                     }
+                    System.out.println("Oh well... looks like there's that, they're done with their stupid little fights");
+                    System.out.println("...");
+                    System.out.println("Anyways... what do you want to do now? \n ===");
                     break;
-                } else if (whatNext.equals("5")) {
+                } else if (whatNext.equals("6")) {
                     System.out.println("Oh, it's a pity! We'll see you soon enough I'm sure. Goodbye~");
                     System.exit(0);
                 } else {

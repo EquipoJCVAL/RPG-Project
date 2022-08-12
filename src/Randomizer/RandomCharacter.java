@@ -15,43 +15,43 @@ public class RandomCharacter {
     static int minHpWarrior = 100;
     static int minStamina = 10;
     static int maxStamina = 50;
-    static int minStrength = 1;
-    static int maxStrength = 10;
+    static int minStrength = 10;
+    static int maxStrength = 50;
 
     //Wizard
     static int maxHpWizard = 100;
     static int minHpWizard = 50;
     static int minMana = 10;
     static int maxMana = 50;
-    static int minIntelligence = 1;
+    static int minIntelligence = 10;
     static int maxIntelligence = 50;
     //Dragon
     static int maxHpDragon = 200;
     static int minHpDragon = 100;
     static int minPower = 10;
     static int maxPower = 50;
-    static int minEssence = 1;
+    static int minEssence = 10;
     static int maxEssence = 50;
     //Houndmaster
     static int maxHpHoundmaster = 100;
     static int minHpHoundmaster = 50;
     static int minPrecision = 10;
     static int maxPrecision = 50;
-    static int minFocus = 1;
-    static int maxFocus = 10;
+    static int minFocus = 10;
+    static int maxFocus = 50;
     //Ranger
     static int maxHpRanger = 200;
     static int minHpRanger = 100;
     static int minAgility = 10;
     static int maxAgility = 50;
-    static int minEnergy = 1;
+    static int minEnergy = 10;
     static int maxEnergy = 50;
     //Witch
     static int maxHpWitch = 100;
     static int minHpWitch = 50;
     static int minDarkMana = 10;
     static int maxDarkMana = 50;
-    static int minArcane = 1;
+    static int minArcane = 10;
     static int maxArcane = 50;
 
     //Warriors names

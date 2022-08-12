@@ -6,7 +6,9 @@ import java.util.concurrent.TimeUnit;
 
 public class Combat {
 
-    static ArrayList<String> colorArray = new ArrayList<String>(){
+    public static ArrayList<Character> graveyardList = new ArrayList<>();
+
+    static ArrayList<String> colorArray = new ArrayList<>(){
         {
             add("\u001B[32m"); //RANGER + HOUNDMASTER
             add("\u001B[34m"); //WIZARD
@@ -25,8 +27,6 @@ public class Combat {
         while(fighter1.getHp() > 0 && fighter2.getHp() > 0){
 
 
-            System.out.println(fighter1.getHp() + colorArray.get(3) + "LIFE COUNTER" + ANSI_RESET);
-            System.out.println(fighter2.getHp() + colorArray.get(3) + "LIFE COUNTER" + ANSI_RESET);
 
             TimeUnit.SECONDS.sleep(1);
             System.out.println("===");
@@ -109,6 +109,16 @@ public class Combat {
                     fighter1.setHp(fighter1.getHp() - damage2 /4);
                 }
             }
+        }
+        if(fighter1.getHp() < 0){
+            System.out.println(fighter1.getName() + " has died and has been sent to the graveyard!");
+            System.out.println(fighter2.getName() + " is the winner of this match.");
+            graveyardList.add(fighter1);
+        }
+        if(fighter2.getHp() < 0){
+            System.out.println(fighter2.getName() + " has died and has been sent to the graveyard!");
+            System.out.println(fighter1.getName() + " is the winner of this match.");
+            graveyardList.add(fighter2);
         }
     }
 }

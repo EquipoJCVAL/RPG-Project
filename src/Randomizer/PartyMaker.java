@@ -12,7 +12,7 @@ public class PartyMaker {
     private int partySize=4;
 
 
-    public static List<Character>randomParty() {
+    public static List<Character> randomParty() {
         List<Character> partyMembers = new ArrayList<>();
 
         for (int i = 0; i < 4; i++) {
