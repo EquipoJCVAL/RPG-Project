@@ -34,6 +34,7 @@ public class Warrior extends Character{
         //results
         results[0] = damage;
         results[2] = 3;
+        results[3] = 0;
         return results;
 
     }

@@ -32,6 +32,7 @@ public class Wizard extends Character{
         // results
         results[0] = damage;
         results[2] = 1;
+        results[3] = 0;
         return results;
     }
 

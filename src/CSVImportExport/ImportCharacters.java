@@ -9,8 +9,8 @@ import java.util.Scanner;
 
 public class ImportCharacters {
 
-    public Character[] importCharacters() throws FileNotFoundException {
-        File file = new File("src/characters.csv");
+    public static Character[] importCharacters(String fileName) throws FileNotFoundException {
+        File file = new File(fileName);
 
         // Counts how many lines in the file
         Scanner r = new Scanner(file);

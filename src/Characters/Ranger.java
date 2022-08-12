@@ -34,6 +34,7 @@ public class Ranger extends Character{
         int[] results = new int[3];
         results[0] = damage;
         results[2] = 0;
+        results[3] = 0;
         return results;
     }
 

@@ -36,6 +36,7 @@ public class Witch extends Character{
         results[0] = poison;
         results[1] = cura;
         results[2] = 2;
+        results[3] = 0;
         return results;
 
     }
