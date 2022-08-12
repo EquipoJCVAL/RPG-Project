@@ -120,9 +120,9 @@ public class InputUser {
                         String path = sc.nextLine();
                         Character[] list = ImportCharacters.importCharacters(path);
                         characterList.addAll(Arrays.asList(list));
+                        System.out.println("The following character has been added to the game: ");
                         for (int i = 0; i < list.length; i++) {
-                            System.out.println("The following character has been added to the game: " + list[i].getName());
-
+                            System.out.println((i + 1) + " - " + list[i].getName());
                         }
                         break;
                     }
