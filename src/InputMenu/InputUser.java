@@ -1,4 +1,4 @@
-package BattleSimulator;
+package InputMenu;
 
 import java.util.Scanner;
 

@@ -1,4 +1,6 @@
-package Characters;
+package Randomizer;
+
+import Characters.*;
 
 import java.util.Random;
 

@@ -1,4 +1,7 @@
-package Characters;
+package CSVImportExport;
+
+import Characters.*;
+import Characters.Character;
 
 import java.io.FileNotFoundException;
 import java.io.File;
