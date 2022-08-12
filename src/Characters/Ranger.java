@@ -31,7 +31,7 @@ public class Ranger extends Character{
             damage = this.agility/2;
             setEnergy(getEnergy()+3);
         }
-        int[] results = new int[3];
+        int[] results = new int[4];
         results[0] = damage;
         results[2] = 0;
         results[3] = 0;

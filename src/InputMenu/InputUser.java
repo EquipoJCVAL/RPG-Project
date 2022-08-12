@@ -17,7 +17,7 @@ public class InputUser {
     static int numMana;
 
 
-    public static void start() throws FileNotFoundException {
+    public static void start() throws FileNotFoundException, InterruptedException {
         System.out.println("   ▄████████    ▄███████▄    ▄██████▄          ▄██████▄     ▄████████   ▄▄▄▄███▄▄▄▄      ▄████████ \n" +
                 "  ███    ███   ███    ███   ███    ███        ███    ███   ███    ███ ▄██▀▀▀███▀▀▀██▄   ███    ███ \n" +
                 "  ███    ███   ███    ███   ███    █▀         ███    █▀    ███    ███ ███   ███   ███   ███    █▀  \n" +
@@ -68,7 +68,7 @@ public class InputUser {
 
                         int totalValue = numMana + numPow + numHp;
 
-                        if (totalValue > 5 || numHp > 5 || numPow > 5) {
+                        if (totalValue > 5 || numHp > 5 || numPow > 5 || numMana > 5) {
                             System.out.println("\u001b[31m" + "You tried to asign too many points, please don't try and cheat ;)" + "\u001B[0m\"");
                             System.out.println("Try again");
                         } else {
@@ -77,8 +77,8 @@ public class InputUser {
                     }
 
                     int characterHP = 120 + (20 * numHp);
-                    int characterPower = 40 + (5 * numPow);
-                    int characterMana = 80 + (10 * numMana);
+                    int characterPower = 30 + (5 * numPow);
+                    int characterMana = 15 + (3 * numMana);
 
                     switch (characterClass) {
                         case "1" -> {

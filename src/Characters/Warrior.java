@@ -29,7 +29,7 @@ public class Warrior extends Character{
             damage = this.strength / 2;
             setStamina(getStamina()+3);
         }
-        int[] results = new int[3];
+        int[] results = new int[4];
 
         //results
         results[0] = damage;

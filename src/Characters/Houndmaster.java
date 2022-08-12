@@ -31,7 +31,7 @@ public class Houndmaster extends Character {
             setFocus(getFocus()+1);
         }
 
-        int[] results = new int[3];
+        int[] results = new int[4];
 
         //results
         results[0] = damage;

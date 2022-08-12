@@ -27,7 +27,7 @@ public class Wizard extends Character{
             damage = this.intelligence/2;
             setMana(getMana() +3);
         }
-        int[] results = new int[3];
+        int[] results = new int[4];
 
         // results
         results[0] = damage;

@@ -2,6 +2,7 @@ package BattleSimulator;
 import Characters.Character;
 import Characters.Wizard;
 import java.util.ArrayList;
+import java.util.concurrent.TimeUnit;
 
 public class Combat {
 
@@ -18,11 +19,13 @@ public class Combat {
     public static final String ANSI_HEAL = "\u001B[36m";
     public static final String ANSI_CRIT = "\u001B[33m";
 
-    public static void combat(Character fighter1, Character fighter2){
+    public static void combat(Character fighter1, Character fighter2) throws InterruptedException {
 
 
         while(fighter1.getHp()>0||fighter2.getHp()>0){
 
+            TimeUnit.SECONDS.sleep(1);
+            System.out.println("===");
             //damage and heal values
             int damage1 = fighter1.attackCommand()[0];
             int heal1 = fighter1.attackCommand()[1];

@@ -37,7 +37,7 @@ public class Dragon extends Character {
             }
         }
 
-        int[] results = new int[3];
+        int[] results = new int[4];
 
         //results
         results[0] = damage;

@@ -22,15 +22,16 @@ public class Witch extends Character{
     public int[] attackCommand() {
         super.attackCommand();
         int cura = 0;
-        if (getDarkMana() > 5 && getHp() < 70) {
+
+        if (getDarkMana() > 10 && getHp() < 70) {
             cura = 50;
-            setDarkMana(getDarkMana()-5);
+            setDarkMana(getDarkMana()-10);
         } else {
-            poison = this.arcane/2;
+            poison = this.arcane/2 + poison;
             setDarkMana(getDarkMana()+3);
         }
 
-        int[] results = new int[3];
+        int[] results = new int[4];
 
         //results
         results[0] = poison;
