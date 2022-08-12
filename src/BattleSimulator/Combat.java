@@ -4,7 +4,7 @@ import Characters.Wizard;
 
 public class Combat {
 
-    public void combat {
+    public void combat (){
 
         Wizard Laia = new Wizard(03, "Laia",200,true,false,40,40);
         Wizard Alex = new Wizard(04, "Alex",200,true,false,40,40);
