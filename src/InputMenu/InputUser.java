@@ -3,11 +3,11 @@ package InputMenu;
 import BattleSimulator.Combat;
 import CSVImportExport.ImportCharacters;
 import Characters.*;
+import Characters.Character;
 
 import java.io.FileNotFoundException;
-import java.lang.Character;
-import java.util.ArrayList;
-import java.util.Scanner;
+import java.io.FileWriter;
+import java.util.*;
 
 public class InputUser {
 
@@ -115,7 +115,12 @@ public class InputUser {
                     while (true) {
                         System.out.println("Please, state the filename of the file you wish to import");
                         String path = sc.nextLine();
-                        ImportCharacters.importCharacters(path);
+                        Character[] list = ImportCharacters.importCharacters(path);
+                        characterList.addAll(Arrays.asList(list));
+                        for (int i = 0; i < list.length; i++) {
+                            System.out.println("The following character has been added to the game: " + list[i].getName());
+
+                        }
                         break;
                     }
                 } else if (whatNext.equals("3")) {
