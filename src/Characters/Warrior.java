@@ -10,8 +10,8 @@ public class Warrior extends Character{
     private int strength;
 
     //constructors
-    public Warrior(int id, String name, int hp, boolean isAlive, boolean inCombat, int stamina, int strength) {
-        super(id, name, hp, isAlive, inCombat);
+    public Warrior(String name, int hp, boolean isAlive, boolean inCombat, int stamina, int strength) {
+        super(name, hp, isAlive, inCombat);
         this.stamina = stamina;
         this.strength = strength;
     }

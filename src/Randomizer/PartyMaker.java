@@ -12,14 +12,14 @@ public class PartyMaker {
     private int partySize=4;
 
 
-    public static List<Character>randomParty(){
-        List<Character> partyMembers=new ArrayList<>();
+    public static List<Character>randomParty() {
+        List<Character> partyMembers = new ArrayList<>();
 
         for (int i = 0; i < 4; i++) {
-            int dice=(int)(Math.random()*5)+1;
+            int dice = (int) (Math.random() * 5) + 1;
             System.out.println(dice);
 
-            switch(dice){
+            switch (dice) {
                 case 1:
                     partyMembers.add(RandomCharacter.getRandomWitch());
 
@@ -50,15 +50,9 @@ public class PartyMaker {
                     break;
 
 
-
-
             }
 
-
-        }
-        return partyMembers;
-
-    }//Metodo para darle un nombre a la party, hemos decidido no usarlo
+        }//Metodo para darle un nombre a la party, hemos decidido no usarlo
     /*
     public static String[] PartyNames = {"Rational Wolfpack","Kitchen Mafia","Peace Rainbows",
             "Productive Escapism","The Public Spat","All in the Mind","Halter Ego","Heart Dark Matter",
@@ -69,7 +63,8 @@ public class PartyMaker {
         return PartyNames.get(rand.nextInt(PartyNames.size()));
     }
 */
-
+        return partyMembers;
+    }
 }
 
 

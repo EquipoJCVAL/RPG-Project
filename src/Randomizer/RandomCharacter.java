@@ -80,28 +80,28 @@ public class RandomCharacter {
 
    //genera un Warrior con status random
     public static Warrior getRandomWarrior() {
-        return new Warrior(id, WarriorName[new Random().nextInt(WarriorName.length)],
+        return new Warrior(WarriorName[new Random().nextInt(WarriorName.length)],
                 (int) Math.floor(Math.random() * (maxHpWarrior - minHpWarrior + 1) + minHpWarrior), true, true,
                 (int) Math.floor(Math.random() * (maxStamina - minStamina + 1) + minStamina),
                 (int) Math.floor(Math.random() * (maxStrength - minStrength + 1) + minStrength));
     }
     //genera un Wizard con status random
     public static Wizard getRandomWizard() {
-        return new Wizard(id, WizardName[new Random().nextInt(WizardName.length)],
+        return new Wizard(WizardName[new Random().nextInt(WizardName.length)],
                 (int) Math.floor(Math.random() * (maxHpWizard - minHpWizard + 1) + minHpWizard), true, true,
                 (int) Math.floor(Math.random() * (maxMana - minMana + 1) + minMana),
                 (int) Math.floor(Math.random() * (maxIntelligence - minIntelligence + 1) + minIntelligence));
     }
     //genera un Dragon con status random
     public static Dragon getRandomDragon() {
-        return new Dragon(id, DragonName[new Random().nextInt(DragonName.length)],
+        return new Dragon(DragonName[new Random().nextInt(DragonName.length)],
                 (int) Math.floor(Math.random() * (maxHpDragon - minHpDragon + 1) + minHpDragon), true, true,
                 (int) Math.floor(Math.random() * (maxPower - minPower + 1) + minPower),
                 (int) Math.floor(Math.random() * (maxEssence - minEssence + 1) + minEssence));
     }
     //genera un Houndmaster con status random
     public static Houndmaster getRandomHoundmaster() {
-        return new Houndmaster(id, HoundmasterName[new Random().nextInt(HoundmasterName.length)],
+        return new Houndmaster(HoundmasterName[new Random().nextInt(HoundmasterName.length)],
                 (int) Math.floor(Math.random() * (maxHpHoundmaster - minHpHoundmaster + 1) + minHpHoundmaster), true, true,
                 (int) Math.floor(Math.random() * (maxPrecision - minPrecision + 1) + minPrecision),
                 (int) Math.floor(Math.random() * (maxFocus - minFocus + 1) + minFocus));
@@ -109,7 +109,7 @@ public class RandomCharacter {
     }
     //genera un Ranger con status random
     public static Ranger getRandomRanger() {
-        return new Ranger(id, RangerName[new Random().nextInt(RangerName.length)],
+        return new Ranger(RangerName[new Random().nextInt(RangerName.length)],
                 (int) Math.floor(Math.random() * (maxHpRanger - minHpRanger + 1) + minHpRanger), true, true,
                 (int) Math.floor(Math.random() * (maxAgility - minAgility + 1) + minAgility),
                 (int) Math.floor(Math.random() * (maxEnergy - minEnergy + 1) + minEnergy));
@@ -117,7 +117,7 @@ public class RandomCharacter {
     }
     ////genera un Witch con status random
     public static Witch getRandomWitch() {
-        return new Witch(id, WitchName[new Random().nextInt(WitchName.length)],
+        return new Witch(WitchName[new Random().nextInt(WitchName.length)],
                 (int) Math.floor(Math.random() * (maxHpWitch - minHpWitch + 1) + minHpWitch), true, true,
                 (int) Math.floor(Math.random() * (maxDarkMana - minDarkMana + 1) + minDarkMana),
                 (int) Math.floor(Math.random() * (maxArcane - minArcane + 1) + minArcane));

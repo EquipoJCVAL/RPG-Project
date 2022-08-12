@@ -6,15 +6,15 @@ public class Character implements Attacker {
 
     //properties
     private int id;
-    private static int idCounter = 0;
+    private static int counterId = 0;
     private String name;
     private int hp;
     private boolean isAlive;
     private boolean inCombat;
 
     //Constructor
-    public Character(int id, String name, int hp, boolean isAlive, boolean inCombat) {
-        setId(id);
+    public Character(String name, int hp, boolean isAlive, boolean inCombat) {
+        setId();
         this.name = name;
         this.hp = hp;
         this.isAlive = isAlive;
@@ -47,8 +47,8 @@ public class Character implements Attacker {
     }
 
     //setters
-    public void setId(int id) {
-        this.id = idCounter++;
+    public void setId() {
+        this.id = counterId++;
     }
 
 

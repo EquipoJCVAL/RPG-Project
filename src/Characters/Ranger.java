@@ -5,13 +5,14 @@ import Interface.Attacker;
 public class Ranger extends Character{
 
     //Class properties
-    private int agility;
     private int energy;
+    private int agility;
+
 
 
     //constructor
-    public Ranger(int id, String name, int hp, boolean isAlive, boolean inCombat, int agility, int energy) {
-        super(id, name, hp, isAlive, inCombat);
+    public Ranger(String name, int hp, boolean isAlive, boolean inCombat, int agility, int energy) {
+        super(name, hp, isAlive, inCombat);
         this.agility = agility;
         this.energy = energy;
     }
@@ -39,19 +40,21 @@ public class Ranger extends Character{
     }
 
     //getters
-    public int getAgility() {
-        return agility;
-    }
     public int getEnergy() {
         return energy;
     }
+    public int getAgility() {
+        return agility;
+    }
+
 
     //setters
-    public void setAgility(int agility) {
-        this.agility = agility;
-    }
     public void setEnergy(int energy) {
         this.energy = energy;
     }
+    public void setAgility(int agility) {
+        this.agility = agility;
+    }
+
 
 }
