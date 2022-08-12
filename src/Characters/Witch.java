@@ -2,16 +2,16 @@ package Characters;
 
 public class Witch extends Character{
 
-    private int arcane;
-    private int darkMana;
 
+    private int darkMana;
+    private int arcane;
     private int poison = 0;
 
     //constructor
-    public Witch(int id, String name, int hp, boolean isAlive, boolean inCombat, int arcane, int darkMana) {
-        super(id, name, hp, isAlive, inCombat);
-        this.arcane = arcane;
+    public Witch(String name, int hp, boolean isAlive, boolean inCombat, int darkMana, int arcane) {
+        super(name, hp, isAlive, inCombat);
         this.darkMana = darkMana;
+        this.arcane = arcane;
     }
 
     //recuerda que la witch tiene el atque normal -> "cada turno hace baseDamage + baseDamage; el primer turno hace
@@ -27,7 +27,7 @@ public class Witch extends Character{
             cura = 50;
             setDarkMana(getDarkMana()-10);
         } else {
-            poison = this.arcane/2 + poison;
+            setPoison(getPoison() + arcane/2);
             setDarkMana(getDarkMana()+3);
         }
 
@@ -43,18 +43,24 @@ public class Witch extends Character{
     }
 
     //getters
-    public int getArcane() {
-        return arcane;
-    }
     public int getDarkMana() {
         return darkMana;
     }
+    public int getArcane() {
+        return arcane;
+    }
+    public int getPoison() {
+        return poison;
+    }
 
     //setters
+    public void setDarkMana(int darkMana) {
+        this.darkMana = darkMana;
+    }
     public void setArcane(int arcane) {
         this.arcane = arcane;
     }
-    public void setDarkMana(int darkMana) {
-        this.darkMana = darkMana;
+    public void setPoison(int poison) {
+        this.poison = poison;
     }
 }

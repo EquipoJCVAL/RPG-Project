@@ -2,12 +2,14 @@ package Characters;
 
 public class Houndmaster extends Character {
 
-    private int precision;
+
     private int focus;
+    private int precision;
+
 
     //constructor
-    public Houndmaster(int id, String name, int hp, boolean isAlive, boolean inCombat, int precision, int focus) {
-        super(id, name, hp, isAlive, inCombat);
+    public Houndmaster(String name, int hp, boolean isAlive, boolean inCombat, int precision, int focus) {
+        super(name, hp, isAlive, inCombat);
         this.precision = precision;
         this.focus = focus;
     }
@@ -42,19 +44,21 @@ public class Houndmaster extends Character {
     }
 
     //getters
-    public int getPrecision() {
-        return precision;
-    }
     public int getFocus() {
         return focus;
     }
+    public int getPrecision() {
+        return precision;
+    }
+
 
     //setters
-    public void setPrecision(int precision) {
-        this.precision = precision;
-    }
     public void setFocus(int focus) {
         this.focus = focus;
     }
+    public void setPrecision(int precision) {
+        this.precision = precision;
+    }
+
 }
 

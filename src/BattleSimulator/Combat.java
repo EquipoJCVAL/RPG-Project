@@ -22,7 +22,11 @@ public class Combat {
     public static void combat(Character fighter1, Character fighter2) throws InterruptedException {
 
 
-        while(fighter1.getHp()>0||fighter2.getHp()>0){
+        while(fighter1.getHp() > 0 && fighter2.getHp() > 0){
+
+
+            System.out.println(fighter1.getHp() + colorArray.get(3) + "LIFE COUNTER" + ANSI_RESET);
+            System.out.println(fighter2.getHp() + colorArray.get(3) + "LIFE COUNTER" + ANSI_RESET);
 
             TimeUnit.SECONDS.sleep(1);
             System.out.println("===");
@@ -35,7 +39,6 @@ public class Combat {
             int classColor2 = fighter2.attackCommand()[2];
             int dogHit1 = fighter1.attackCommand()[3];
             int dogHit2 = fighter2.attackCommand()[3];
-
 
             //dice rolls
             int random1 = (int) (Math.random() * 20) + 1;

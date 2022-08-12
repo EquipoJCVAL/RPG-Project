@@ -39,31 +39,31 @@ public class ImportCharacters {
 
             switch (list[1]) {
                 case "Warrior" -> {
-                    Warrior warrior = new Warrior(Integer.parseInt(list[0]), list[1], Integer.parseInt(list[2]), Boolean.parseBoolean(list[3]), Boolean.parseBoolean(list[4]), Integer.parseInt(list[5]), Integer.parseInt(list[6]));
+                    Warrior warrior = new Warrior(list[1], Integer.parseInt(list[2]), Boolean.parseBoolean(list[3]), Boolean.parseBoolean(list[4]), Integer.parseInt(list[5]), Integer.parseInt(list[6]));
                     charactersList[listPosition] = warrior;
 
                 }
                 case "Wizard" -> {
-                    Wizard wizard = new Wizard(Integer.parseInt(list[0]), list[1], Integer.parseInt(list[2]), Boolean.parseBoolean(list[3]), Boolean.parseBoolean(list[4]), Integer.parseInt(list[5]), Integer.parseInt(list[6]));
+                    Wizard wizard = new Wizard( list[1], Integer.parseInt(list[2]), Boolean.parseBoolean(list[3]), Boolean.parseBoolean(list[4]), Integer.parseInt(list[5]), Integer.parseInt(list[6]));
                     charactersList[listPosition] = wizard;
 
                 }
                 case "Ranger" -> {
-                    Ranger ranger = new Ranger(Integer.parseInt(list[0]), list[1], Integer.parseInt(list[2]), Boolean.parseBoolean(list[3]), Boolean.parseBoolean(list[4]), Integer.parseInt(list[5]), Integer.parseInt(list[6]));
+                    Ranger ranger = new Ranger(list[1], Integer.parseInt(list[2]), Boolean.parseBoolean(list[3]), Boolean.parseBoolean(list[4]), Integer.parseInt(list[5]), Integer.parseInt(list[6]));
                     charactersList[listPosition] = ranger;
                 }
                 case "Dragon" -> {
-                    Dragon dragon = new Dragon(Integer.parseInt(list[0]), list[1], Integer.parseInt(list[2]), Boolean.parseBoolean(list[3]), Boolean.parseBoolean(list[4]), Integer.parseInt(list[5]), Integer.parseInt(list[6]));
+                    Dragon dragon = new Dragon(list[1], Integer.parseInt(list[2]), Boolean.parseBoolean(list[3]), Boolean.parseBoolean(list[4]), Integer.parseInt(list[5]), Integer.parseInt(list[6]));
                     charactersList[listPosition] = dragon;
 
                 }
                 case "Witch" -> {
-                    Witch witch = new Witch(Integer.parseInt(list[0]), list[1], Integer.parseInt(list[2]), Boolean.parseBoolean(list[3]), Boolean.parseBoolean(list[4]), Integer.parseInt(list[5]), Integer.parseInt(list[6]));
+                    Witch witch = new Witch(list[1], Integer.parseInt(list[2]), Boolean.parseBoolean(list[3]), Boolean.parseBoolean(list[4]), Integer.parseInt(list[5]), Integer.parseInt(list[6]));
                     charactersList[listPosition] = witch;
 
                 }
                 case "Houndmaster" -> {
-                    Houndmaster houndmaster = new Houndmaster(Integer.parseInt(list[0]), list[1], Integer.parseInt(list[2]), Boolean.parseBoolean(list[3]), Boolean.parseBoolean(list[4]), Integer.parseInt(list[5]), Integer.parseInt(list[6]));
+                    Houndmaster houndmaster = new Houndmaster(list[1], Integer.parseInt(list[2]), Boolean.parseBoolean(list[3]), Boolean.parseBoolean(list[4]), Integer.parseInt(list[5]), Integer.parseInt(list[6]));
                     charactersList[listPosition] = houndmaster;
 
                 }

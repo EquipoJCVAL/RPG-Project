@@ -2,11 +2,12 @@ package Characters;
 
 public class Dragon extends Character {
 
-    private int power;
-    private int essence;
 
-    public Dragon(int id, String name, int hp, boolean isAlive, boolean inCombat, int power, int essence) {
-        super(id, name, hp, isAlive, inCombat);
+    private int essence;
+    private int power;
+
+    public Dragon(String name, int hp, boolean isAlive, boolean inCombat, int power, int essence) {
+        super(name, hp, isAlive, inCombat);
         this.power = power;
         this.essence = essence;
     }
@@ -47,18 +48,20 @@ public class Dragon extends Character {
     }
 
     //getters
-    public int getPower() {
-        return power;
-    }
     public int getEssence() {
         return essence;
     }
+    public int getPower() {
+        return power;
+    }
+
 
     //setters
-    public void setPower(int power) {
-        this.power = power;
-    }
     public void setEssence(int essence) {
         this.essence = essence;
     }
+    public void setPower(int power) {
+        this.power = power;
+    }
+
 }

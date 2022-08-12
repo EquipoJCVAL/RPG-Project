@@ -38,6 +38,9 @@ public class InputUser {
 
             System.out.println("1.- Create new character \n 2.- Import party \n 3.- Visit the graveyard \n 4.- Start combat \n 5.- Leave the game");
 
+            for (int i = 0; i < characterList.size(); i++) {
+                System.out.println(characterList.get(i).getId());
+            }
             while (true) {
 
                 String whatNext = sc.nextLine();
@@ -77,32 +80,32 @@ public class InputUser {
                     }
 
                     int characterHP = 120 + (20 * numHp);
-                    int characterPower = 30 + (5 * numPow);
+                    int characterPower = 15 + (3 * numPow);
                     int characterMana = 15 + (3 * numMana);
 
                     switch (characterClass) {
                         case "1" -> {
-                            Warrior warrior = new Warrior(01, characterName, characterHP, true, true, characterMana, characterPower);
+                            Warrior warrior = new Warrior(characterName, characterHP, true, true, characterMana, characterPower);
                             characterList.add(warrior);
                         }
                         case "2" -> {
-                            Wizard wizard = new Wizard(01, characterName, characterHP, true, true, characterMana, characterPower);
+                            Wizard wizard = new Wizard(characterName, characterHP, true, true, characterMana, characterPower);
                             characterList.add(wizard);
                         }
                         case "4" -> {
-                            Ranger ranger = new Ranger(01, characterName, characterHP, true, true, characterMana, characterPower);
+                            Ranger ranger = new Ranger(characterName, characterHP, true, true, characterMana, characterPower);
                             characterList.add(ranger);
                         }
                         case "3" -> {
-                            Dragon dragon = new Dragon(01, characterName, characterHP, true, true, characterMana, characterPower);
+                            Dragon dragon = new Dragon(characterName, characterHP, true, true, characterMana, characterPower);
                             characterList.add(dragon);
                         }
                         case "5" -> {
-                            Witch witch = new Witch(01, characterName, characterHP, true, true, characterMana, characterPower);
+                            Witch witch = new Witch(characterName, characterHP, true, true, characterMana, characterPower);
                             characterList.add(witch);
                         }
                         case "6" -> {
-                            Houndmaster houndmaster = new Houndmaster(01, characterName, characterHP, true, true, characterMana, characterPower);
+                            Houndmaster houndmaster = new Houndmaster(characterName, characterHP, true, true, characterMana, characterPower);
                             characterList.add(houndmaster);
                             houndmaster.getName();
                         }
