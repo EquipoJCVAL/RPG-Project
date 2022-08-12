@@ -6,13 +6,13 @@ import java.util.Scanner;
 
 public class ImportCharacters {
 
-    public Character[] importCharacters() throws FileNotFoundException {
-        File file = new File("src/characters.csv");
-
+    public static Character[] importCharacters(String pathname) throws FileNotFoundException {
+        // File file = new File("src/characters.csv");
+        File file = new File(pathname);
         // Counts how many lines in the file
         Scanner r = new Scanner(file);
         int counterLines = 0;
-        while(r.hasNextLine()){
+        while (r.hasNextLine()) {
             counterLines++;
             r.nextLine();
         }
@@ -30,7 +30,7 @@ public class ImportCharacters {
             String data = reader.nextLine();
             String[] list = data.split("-");
 
-            for (int i = 0; i < list.length; i++){
+            for (int i = 0; i < list.length; i++) {
                 list[i] = list[i].trim();
             }
 
@@ -65,17 +65,12 @@ public class ImportCharacters {
 
                 }
 
-
-
             }
 
             listPosition++;
 
         }
 
-
         return charactersList;
     }
-
-
 }
